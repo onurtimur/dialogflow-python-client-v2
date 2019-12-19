@@ -39,6 +39,7 @@ from dialogflow_v2.gapic import enums
 from dialogflow_v2.gapic.transports import agents_grpc_transport
 from dialogflow_v2.proto import agent_pb2
 from dialogflow_v2.proto import agent_pb2_grpc
+from dialogflow_v2.types import Agent
 from google.longrunning import operations_pb2
 from google.protobuf import empty_pb2
 from google.protobuf import field_mask_pb2
@@ -240,7 +241,7 @@ class AgentsClient(object):
             >>> client = dialogflow_v2.AgentsClient()
             >>>
             >>> # TODO: Initialize `agent`:
-            >>> agent = {}
+            >>> agent = Agent(display_name="display name",parent="project id path")
             >>>
             >>> response = client.set_agent(agent)
 
